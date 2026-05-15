@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "yashwidget",
+    "production": "yashwidget"
+  },
+  "targets": {},
+  "etags": {}
+}
