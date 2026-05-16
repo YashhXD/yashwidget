@@ -13,7 +13,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: 'any'
+          flutter-version: '3.22.2' # A very solid, stable version
           cache: true
 
       - name: Install dependencies and Build
