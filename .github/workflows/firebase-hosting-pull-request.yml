@@ -14,15 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 1. You must add this so the robot knows what 'flutter' is
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: '3.19.0'
+          # Use 3.22.2 to match your 'merge' workflow and support your code
+          flutter-version: '3.22.2' 
           cache: true
 
-      # 2. Now it can actually build
       - name: Build Web
         run: flutter pub get && flutter build web
 
