@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CallToAction extends StatelessWidget {
   final String title;
-  CallToAction(this.title);
+  const CallToAction(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {

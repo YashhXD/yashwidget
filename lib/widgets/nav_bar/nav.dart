@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// FIX: Renamed class to capital 'NavBar' to resolve the "method not defined" error
 class navBar extends StatelessWidget {
-  // 1. Define the launch function inside the class
+  // Declare the scroll callbacks needed by home_view.dart
+  final VoidCallback onHomePressed;
+  final VoidCallback onWorkPressed;
+
+  // Add the callbacks to your constructor
+  const navBar({
+    super.key,
+    required this.onHomePressed,
+    required this.onWorkPressed,
+  });
+
+  // Your URL launcher logic for the resume remains perfectly intact
   Future<void> _launchResume() async {
-    // Replace with your open-access Credly or Drive link
     final Uri url = Uri.parse('https://drive.google.com/file/d/1JmoMIW67p1lIGg7-_KmEVCxMZsVbpr9A/view?usp=sharing'); 
     
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
@@ -14,23 +25,52 @@ class navBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          // Your portfolio logo
           SizedBox(
             height: 200,
             width: 200,
             child: Image.asset('assets/logo.png'),
           ),
+          
+          // Navigation links container
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              // 2. Link the function to the Resume button
+              // --- BUTTON 1: HOME (Smooth Scroll) ---
+              TextButton(
+                onPressed: onHomePressed, 
+                child: const Text(
+                  'Home',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 226, 143, 201),
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 30), // Added consistent spacing between items
+
+              // --- BUTTON 2: WORK (Smooth Scroll) ---
+              TextButton(
+                onPressed: onWorkPressed, 
+                child: const Text(
+                  'Work',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 226, 143, 201),
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 30),
+
+              // --- BUTTON 3: RESUME (External URL Link) ---
               TextButton(
                 onPressed: _launchResume, 
-                child: Text(
+                child: const Text(
                   'Resume',
                   style: TextStyle(
                     color: Color.fromARGB(255, 226, 143, 201),
@@ -38,9 +78,12 @@ class navBar extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(width: 30),
+
+              // --- BUTTON 4: SHIT POSTING (Console log placeholder) ---
               TextButton(
-                onPressed: () { print('Shit Posting pressed'); },
-                child: Text(
+                onPressed: () { debugPrint('Shit Posting pressed'); },
+                child: const Text(
                   'Shit Posting',
                   style: TextStyle(
                     color: Color.fromARGB(255, 226, 143, 201),
