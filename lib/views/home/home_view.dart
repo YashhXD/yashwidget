@@ -80,6 +80,10 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                     Container(
+                      key: _workKey1,
+                      child: const WorkSection(), 
+                    ),
+                    Container(
                       key: _workKey,
                       child: const WorkSection(), 
                     ),
