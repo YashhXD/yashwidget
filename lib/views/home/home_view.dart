@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:auto_scrolling/auto_scrolling.dart'; // 1. IMPORT THE PACKAGE
 import 'package:portfolio/widgets/centered_view/centered_view.dart';
 import 'package:portfolio/widgets/course_details/course_details.dart';
 import 'package:portfolio/widgets/nav_bar/nav.dart';
 import 'package:portfolio/widgets/work/work.dart';
-import 'package:portfolio/widgets/scroll/smooth_scroll_wrapper.dart'; // Import your new wrapper
+import 'package:portfolio/widgets/scroll/smooth_scroll_wrapper.dart'; 
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -27,7 +28,7 @@ class _HomeViewState extends State<HomeView> {
 
       _scrollController.animateTo(
         targetOffset,
-        duration: const Duration(milliseconds: 800), // Nav click animation speed
+        duration: const Duration(milliseconds: 800), 
         curve: Curves.easeInOutCubic,
       );
     }
@@ -51,43 +52,59 @@ class _HomeViewState extends State<HomeView> {
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: CenteredView(
-            // --- ENTIRE WEBSITE GLOBAL SMOOTH SCROLL ACTIVATED HERE ---
-            child: SmoothScrollWrapper(
-              controller: _scrollController,
-              scrollSpeed: 200.0, // Tweak this value to make wheel scrolling faster/slower
-              animationDuration: 430, // Tweak this value to make wheel scrolling softer/snappier
-              child: SingleChildScrollView(
+          body: SmoothScrollWrapper(
+            controller: _scrollController,
+            scrollSpeed: 200.0, 
+            animationDuration: 430, 
+            // 2. WRAP THE CONTENT SEGMENT WITH AUTOSCROLL
+            child: AutoScroll(
+              controller: _scrollController, // Passes your shared controller
+              deadZoneRadius: 12,           // Adjusts mouse movement sensitivity near the anchor point
+              child: Scrollbar(
                 controller: _scrollController,
-                physics: const NeverScrollableScrollPhysics(), // Disables default rigid web scrolling
-                child: Column(
-                  children: <Widget>[
-                    navBar(
-                      onHomePressed: () => _scrollToSection(_heroKey),
-                      onWorkPressed: () => _scrollToSection(_workKey),
-                    ),
-                    
-                    // Section 1: Hero
-                    Container(
-                      key: _heroKey,
-                      child: IntrinsicHeight(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: const <Widget>[
-                            Expanded(child: CourseDetails()),
-                          ],
+                thumbVisibility: true, 
+                trackVisibility: true, 
+                child: SingleChildScrollView(
+                  controller: _scrollController,
+                  physics: const NeverScrollableScrollPhysics(), 
+                  child: CenteredView(
+                    child: Column(
+                      children: <Widget>[
+                        navBar(
+                          onHomePressed: () => _scrollToSection(_heroKey),
+                          onWorkPressed: () => _scrollToSection(_workKey),
                         ),
-                      ),
+                        
+                        Container(
+                          key: _heroKey,
+                          child: IntrinsicHeight(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: const <Widget>[
+                                Expanded(child: CourseDetails()),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 100,bottom: 150),
+                          child: Text('Working in creative fields for over 6 years for numerous clients around the globe. \nAlways have been passionate about technology hence learning new technologies , \ncurrently I am facinated by Flutter which is why I created this whole website in dart language ontop of Flutter framework.',
+                          style: TextStyle(fontSize: 17,
+                          color: Color.fromARGB(255, 41, 37, 75),
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'SpaceB',),)
+                        ),
+                        Container(
+                          key: _workKey1,
+                          child: const WorkSection(), 
+                        ),
+                        Container(
+                          key: _workKey,
+                          child: const WorkSection(), 
+                        ),
+                      ],
                     ),
-                    Container(
-                      key: _workKey1,
-                      child: const WorkSection(), 
-                    ),
-                    Container(
-                      key: _workKey,
-                      child: const WorkSection(), 
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),
