@@ -28,6 +28,17 @@ flutter:
     - assets/terminal.png
     - assets/insta_work.png
     - assets/soundboard.png
+    - assets/logos/flutter.png
+    - assets/logos/django.png
+    - assets/logos/Dart.png
+    - assets/logos/java.png
+    - assets/logos/html.png
+    - assets/logos/cpp.png
+    - assets/logos/js.png
+    - assets/logos/python.png
+    - assets/logos/blender.png
+    - assets/logos/ae.png
+    - assets/logos/pp.png
     - assets/background/back.jpg
 
   fonts:
