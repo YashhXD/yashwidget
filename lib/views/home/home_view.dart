@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart'; // Required for FrictionSimulation
 import 'package:portfolio/widgets/centered_view/centered_view.dart';
 import 'package:portfolio/widgets/course_details/course_details.dart';
+import 'package:portfolio/widgets/skills/skills.dart';
 import 'package:portfolio/widgets/nav_bar/nav.dart';
 import 'package:portfolio/widgets/work/work.dart';
 import 'package:flutter/scheduler.dart';
@@ -41,7 +42,7 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
       return;
     }
 
-    final double dt = (elapsed - _lastFrameTime).inMilliseconds.toDouble() / 5;
+    final double dt = (elapsed - _lastFrameTime).inMilliseconds.toDouble() / 8;
     _lastFrameTime = elapsed;
 
     if (_velocity.abs() < 0.5) {
@@ -51,7 +52,7 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
       return;
     }
 
-    double newPosition = widget.controller.offset + (_velocity * dt);
+    double newPosition = widget.controller.offset + (_velocity * dt  );
 
     newPosition = newPosition.clamp(
       widget.controller.position.minScrollExtent,
@@ -59,7 +60,7 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
     );
 
     // Light friction for a long ease-out glide
-    _velocity *= 0.92; 
+    _velocity *= 0.90; 
 
     if (newPosition == widget.controller.position.minScrollExtent ||
         newPosition == widget.controller.position.maxScrollExtent) {
@@ -74,10 +75,10 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
       if (!widget.controller.hasClients) return;
 
       // Gentle push for a soft ease-in
-      _velocity += event.scrollDelta.dy / 2 ;
+      _velocity += event.scrollDelta.dy / 2  ;
 
       // THE FIX: Terminal Velocity Clamp prevents wild speed spikes
-      _velocity = _velocity.clamp(-15.0, 15.0); 
+      _velocity = _velocity.clamp(-15.0, 15.0);
 
       if (!_ticker.isTicking) {
         _lastFrameTime = Duration.zero;
@@ -135,6 +136,7 @@ class _HomeViewState extends State<HomeView> {
   final GlobalKey _heroKey = GlobalKey();
   final GlobalKey _workKey = GlobalKey();
   final GlobalKey _workKey1 = GlobalKey();
+  final GlobalKey _skills = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
     final RenderBox? renderBox = key.currentContext?.findRenderObject() as RenderBox?;
@@ -200,25 +202,26 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
+                      SizedBox(height: 400,),
                       Container(
-                        padding: const EdgeInsets.only(top: 100, bottom: 150),
-                        child: const Text(
-                          'Working in creative fields for over 6 years for numerous clients around the globe. \nAlways have been passionate about technology hence learning new technologies , \ncurrently I am facinated by Flutter which is why I created this whole website in dart language ontop of Flutter framework.',
-                          style: TextStyle(
-                            fontSize: 17,
-                            color: Color.fromARGB(255, 41, 37, 75),
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'SpaceB',
+                        width: 1000,
+                        child: Text('My Work',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                        fontSize: 70,
+                        color: const Color.fromARGB(255, 236, 166, 174)
+                          ),),
+                      ),
+                      Container(
+                        key: _skills,
+                        child: IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const <Widget>[
+                              Expanded(child: WorkSection()),
+                            ],
                           ),
                         ),
-                      ),
-                      Container(
-                        key: _workKey1,
-                        child: const WorkSection(), 
-                      ),
-                      Container(
-                        key: _workKey,
-                        child: const WorkSection(), 
                       ),
                     ],
                   ),

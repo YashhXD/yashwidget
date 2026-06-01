@@ -12,16 +12,18 @@ class CourseDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: const <Widget>[
+          SizedBox(height: 60,),
           Text( // Adding const here covers the Text and its TextStyle
-            'I am \nYash Mehta', 
+            'I am \nYash Mehta',
             style: TextStyle(
+              
               fontWeight: FontWeight.w800, 
               height: 1.1, 
               fontSize: 70, 
               color: Color.fromARGB(255, 24, 30, 62),
             ),
           ),
-          SizedBox(height: 30,), // Added const here
+          SizedBox(height: 70,), // Added const here
           Text( // Adding const here covers the Text and its TextStyle
             'Flutter Developer | Motion Graphic Designer | 3D Visual Artist',
             style: TextStyle(

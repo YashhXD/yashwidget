@@ -5,6 +5,17 @@ class skillSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      padding: EdgeInsets.all(40),
+        child: const Column(
+          children: [
+            Text('My Work', 
+            style: TextStyle(
+              fontSize: 15,
+            )),
+          ],
+        ),
+      
+    );
   }
 }
