@@ -25,6 +25,7 @@ flutter:
 
   assets:
     - assets/logo.png
+    - assets/terminal.png
     - assets/background/back.jpg
 
   fonts:

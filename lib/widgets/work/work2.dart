@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WorkSection extends StatelessWidget {
-  const WorkSection({super.key});
+class WorkSection2 extends StatelessWidget {
+  const WorkSection2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,25 +26,9 @@ class WorkSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // --- LEFT HAND SIDE: PROJECT IMAGE SCREEN ---
-                Expanded(
-                  flex: 4, // Takes up ~40% of horizontal space
-                  child: AspectRatio(
-                    aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1555066931-4365d14bab8c', // Sample placeholder link
-                        fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) => Container(
-                          color: Colors.black45,
-                          child: const Icon(Icons.code, color: Colors.white, size: 40),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
                 
-                const SizedBox(width: 32), // Gap between Image and Text elements
+                
+                 // Gap between Image and Text elements
 
                 // --- RIGHT HAND SIDE: CONTENT COLUMN ---
                 Expanded(
@@ -54,7 +38,7 @@ class WorkSection extends StatelessWidget {
                     children: [
                       // 1. Description Text
                       const Text(
-                        'I have created a project which makes a project projectable and help those who are having issues while making projects.',
+                        'I created Terminal Git Chat. It utilizes GitHub in a way that allows repository collaborators to chat in real-time, keeping the entire chat database in a simple text file.',
                         style: TextStyle(
                           fontFamily: 'SpaceSB',
                           fontSize: 20,
@@ -66,9 +50,9 @@ class WorkSection extends StatelessWidget {
                       const SizedBox(height: 12),
 
                       // 2. Custom Bullet Points
-                      _buildBulletPoint('I used project architecture'),
+                      _buildBulletPoint('Completely made using JavaScript'),
                       const SizedBox(height: 6),
-                      _buildBulletPoint('Backend using node project'),
+                      _buildBulletPoint('Utilizes GitHub as backend server'),
                       const SizedBox(height: 24),
 
                       // 3. Tech Stack Tags Row
@@ -76,16 +60,15 @@ class WorkSection extends StatelessWidget {
                         spacing: 12, // Gap between chips horizontally
                         runSpacing: 8, // Gap if chips wrap to next line
                         children: [
-                          _buildTechChip('Flutter'),
-                          _buildTechChip('Node Js'),
-                          _buildTechChip('Firebase'),
+                          _buildTechChip('GitHub'),
+                          _buildTechChip('JavaScript'),
                         ],
                       ),
                       const SizedBox(height: 60),
 
                       // 4. GitHub View Project Button aligned to the bottom-right
                       Align(
-                        alignment: Alignment.bottomRight,
+                        alignment: Alignment.bottomLeft,
                         child: ElevatedButton.icon(
                           onPressed: () async {
                               // 2. Parse your GitHub link into a valid Uri object
@@ -116,6 +99,24 @@ class WorkSection extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ),
+                const SizedBox(width: 32),
+
+                Expanded(
+                  flex: 4, // Takes up ~40% of horizontal space
+                  child: AspectRatio(
+                    aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset('terminal.png', // Sample placeholder link
+                        fit: BoxFit.fitHeight,
+                        errorBuilder: (context, error, stackTrace) => Container(
+                          color: Colors.black45,
+                          child: const Icon(Icons.code, color: Colors.white, size: 40),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ],
