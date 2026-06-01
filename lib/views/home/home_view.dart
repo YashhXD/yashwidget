@@ -7,6 +7,7 @@ import 'package:portfolio/widgets/skills/skills.dart';
 import 'package:portfolio/widgets/nav_bar/nav.dart';
 import 'package:portfolio/widgets/work/work1.dart';
 import 'package:portfolio/widgets/work/work2.dart';
+import 'package:portfolio/widgets/work/work3.dart';
 import 'package:flutter/scheduler.dart';
 
 // 1. The Mouse Wheel Accumulator (Tuned for smooth ease-in/ease-out)
@@ -232,6 +233,17 @@ class _HomeViewState extends State<HomeView> {
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: const <Widget>[
                               Expanded(child: WorkSection2()),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 100,),
+                      Container(
+                        child: IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const <Widget>[
+                              Expanded(child: WorkSection3()),
                             ],
                           ),
                         ),

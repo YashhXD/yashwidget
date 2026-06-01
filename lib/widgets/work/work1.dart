@@ -51,6 +51,12 @@ class WorkSection1 extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const Text('Terminal Git Chat',
+                      style: TextStyle(
+                        fontFamily: 'Meringue',
+                        fontSize: 30,
+                        fontWeight: FontWeight(800)
+                      ),),
                       // 1. Description Text
                       const Text(
                         'I created Terminal Git Chat. It utilizes GitHub in a way that allows repository collaborators to chat in real-time, keeping the entire chat database in a simple text file.',

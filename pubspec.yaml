@@ -26,6 +26,8 @@ flutter:
   assets:
     - assets/logo.png
     - assets/terminal.png
+    - assets/insta_work.png
+    - assets/soundboard.png
     - assets/background/back.jpg
 
   fonts:

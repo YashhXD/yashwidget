@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WorkSection2 extends StatelessWidget {
-  const WorkSection2({super.key});
+class WorkSection3 extends StatelessWidget {
+  const WorkSection3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +25,41 @@ class WorkSection2 extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // --- LEFT HAND SIDE: PROJECT IMAGE SCREEN ---
+                Expanded(
+                  flex: 4, // Takes up ~40% of horizontal space
+                  child: AspectRatio(
+                    aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset('soundboard.png', // Sample placeholder link
+                        fit: BoxFit.fitHeight,
+                        errorBuilder: (context, error, stackTrace) => Container(
+                          color: Colors.black45,
+                          child: const Icon(Icons.code, color: Colors.white, size: 40),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                
+                const SizedBox(width: 32), // Gap between Image and Text elements
+
+                // --- RIGHT HAND SIDE: CONTENT COLUMN ---
                 Expanded(
                   flex: 6, // Takes up ~60% of horizontal space
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Praxiyo',
+                      const Text('SoundBoard App',
                       style: TextStyle(
                         fontFamily: 'Meringue',
                         fontSize: 30,
                         fontWeight: FontWeight(800)
                       ),),
+                      // 1. Description Text
                       const Text(
-                        'Highly passionate about visual creativity, I have been been following my hobby of video editing from the last 5 years and posting consistently on my instagram handle. I really enjoy it alot',
+                        'Developed a SoundBoard app which can play various sounds straight from the click of a button, a practise application for learning and implementing Flutter framework.',
                         style: TextStyle(
                           fontFamily: 'SpaceSB',
                           fontSize: 20,
@@ -49,9 +71,11 @@ class WorkSection2 extends StatelessWidget {
                       const SizedBox(height: 12),
 
                       // 2. Custom Bullet Points
-                      _buildBulletPoint('Primarily using Adobe After Effects and Premier Pro.'),
+                      _buildBulletPoint('Based on Dart language developed by Google.'),
                       const SizedBox(height: 6),
-                      _buildBulletPoint('Rendering 3D visuals using Blender to transform my ideas into reality'),
+                      _buildBulletPoint('Works locally requiring no internet connectivity.'),
+                      const SizedBox(height: 6),
+                      _buildBulletPoint('Beta version is published and further feature about to roll out.'),
                       const SizedBox(height: 24),
 
                       // 3. Tech Stack Tags Row
@@ -59,21 +83,20 @@ class WorkSection2 extends StatelessWidget {
                         spacing: 12, // Gap between chips horizontally
                         runSpacing: 8, // Gap if chips wrap to next line
                         children: [
-                          _buildTechChip('Adobe After Effects'),
-                          _buildTechChip('Adobe Premier Pro'),
-                          _buildTechChip('Blender 3D'),
-                          _buildTechChip('Audacity'),
+                          _buildTechChip('Dart'),
+                          _buildTechChip('Flutter'),
+                          _buildTechChip('App Dev'),
                         ],
                       ),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
 
                       // 4. GitHub View Project Button aligned to the bottom-right
                       Align(
-                        alignment: Alignment.bottomLeft,
+                        alignment: Alignment.bottomRight,
                         child: ElevatedButton.icon(
                           onPressed: () async {
                               // 2. Parse your GitHub link into a valid Uri object
-                              final Uri repoUrl = Uri.parse('https://www.instagram.com/praxiyo737/');
+                              final Uri repoUrl = Uri.parse('https://github.com/YashhXD/SoundBoard-app');
 
                               // 3. Check if the device can open the URL, then launch it
                               if (!await launchUrl(repoUrl, mode: LaunchMode.externalApplication)) {
@@ -85,14 +108,14 @@ class WorkSection2 extends StatelessWidget {
                           },
                           icon: const Icon(Icons.code_rounded, size: 18, color: Colors.white), // Standard icon fallback
                           label: const Text(
-                            'View Media',
+                            'View Project',
                             style: TextStyle(
                               fontFamily: 'SpaceSB',
                               fontWeight: FontWeight.w600, color: Colors.white),
                           ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
-                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -100,24 +123,6 @@ class WorkSection2 extends StatelessWidget {
                         ),
                       ),
                     ],
-                  ),
-                ),
-                const SizedBox(width: 32),
-
-                Expanded(
-                  flex: 4, // Takes up ~40% of horizontal space
-                  child: AspectRatio(
-                    aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('insta_work.png', // Sample placeholder link
-                        fit: BoxFit.fitHeight,
-                        errorBuilder: (context, error, stackTrace) => Container(
-                          color: Colors.black45,
-                          child: const Icon(Icons.code, color: Colors.white, size: 40),
-                        ),
-                      ),
-                    ),
                   ),
                 ),
               ],
