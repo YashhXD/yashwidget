@@ -25,20 +25,8 @@ flutter:
 
   assets:
     - assets/logo.png
-    - assets/work_asset/terminal.png
-    - assets/work_asset/insta_work.png
-    - assets/work_asset/soundboard.png
-    - assets/logos/flutter.png
-    - assets/logos/django.png
-    - assets/logos/Dart.png
-    - assets/logos/Java.png
-    - assets/logos/html.png
-    - assets/logos/cpp.png
-    - assets/logos/js.png
-    - assets/logos/python.png
-    - assets/logos/blender.png
-    - assets/logos/ae.png
-    - assets/logos/pp.png
+    - assets/work_asset/
+    - assets/logos/
     - assets/background/back.jpg
 
   fonts:
