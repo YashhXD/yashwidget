@@ -25,9 +25,9 @@ flutter:
 
   assets:
     - assets/logo.png
-    - assets/terminal.png
-    - assets/insta_work.png
-    - assets/soundboard.png
+    - assets/work_asset/terminal.png
+    - assets/work_asset/insta_work.png
+    - assets/work_asset/soundboard.png
     - assets/logos/flutter.png
     - assets/logos/django.png
     - assets/logos/Dart.png

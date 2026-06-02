@@ -32,7 +32,7 @@ class WorkSection3 extends StatelessWidget {
                     aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('assets/soundboard.png', // Sample placeholder link
+                      child: Image.asset('work_asset/soundboard.png', // Sample placeholder link
                         fit: BoxFit.fitHeight,
                         errorBuilder: (context, error, stackTrace) => Container(
                           color: Colors.black45,
@@ -71,6 +71,8 @@ class WorkSection3 extends StatelessWidget {
                       const SizedBox(height: 12),
 
                       // 2. Custom Bullet Points
+                      _buildBulletPoint('Based on Dart language developed by Google.'),
+                      const SizedBox(height: 6),
                       _buildBulletPoint('Based on Dart language developed by Google.'),
                       const SizedBox(height: 6),
                       _buildBulletPoint('Works locally requiring no internet connectivity.'),

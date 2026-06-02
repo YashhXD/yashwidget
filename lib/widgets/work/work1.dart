@@ -32,7 +32,7 @@ class WorkSection1 extends StatelessWidget {
                     aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('assets/terminal.png', // Sample placeholder link
+                      child: Image.asset('work_asset/terminal.png', // Sample placeholder link
                         fit: BoxFit.fitHeight,
                         errorBuilder: (context, error, stackTrace) => Container(
                           color: Colors.black45,
