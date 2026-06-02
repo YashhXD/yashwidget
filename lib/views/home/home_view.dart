@@ -136,7 +136,6 @@ class _HomeViewState extends State<HomeView> {
   final ScrollController _scrollController = ScrollController();
   final GlobalKey _heroKey = GlobalKey();
   final GlobalKey _workKey = GlobalKey();
-  final GlobalKey _workKey1 = GlobalKey();
   final GlobalKey _skills = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
