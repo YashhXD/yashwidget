@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart'; // Required for FrictionSimulation
 import 'package:portfolio/widgets/centered_view/centered_view.dart';
 import 'package:portfolio/widgets/course_details/course_details.dart';
-import 'package:portfolio/widgets/skills/skills.dart';
 import 'package:portfolio/widgets/nav_bar/nav.dart';
 import 'package:portfolio/widgets/work/work1.dart';
 import 'package:portfolio/widgets/work/work2.dart';
