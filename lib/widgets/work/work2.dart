@@ -110,7 +110,7 @@ class WorkSection2 extends StatelessWidget {
                     aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('insta_work.png', // Sample placeholder link
+                      child: Image.asset('assets/insta_work.png', // Sample placeholder link
                         fit: BoxFit.fitHeight,
                         errorBuilder: (context, error, stackTrace) => Container(
                           color: Colors.black45,
