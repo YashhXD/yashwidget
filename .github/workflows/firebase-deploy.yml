@@ -15,8 +15,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
-          flutter-version: '3.44.1'   # whatever flutter --version shows after switching
+          channel: 'stable'  # whatever flutter --version shows after switching
 
       - name: Install dependencies
         run: flutter pub get
