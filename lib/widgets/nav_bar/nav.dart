@@ -6,12 +6,14 @@ class navBar extends StatelessWidget {
   // Declare the scroll callbacks needed by home_view.dart
   final VoidCallback onHomePressed;
   final VoidCallback onWorkPressed;
+  final VoidCallback onExpPressed;
 
   // Add the callbacks to your constructor
   const navBar({
     super.key,
     required this.onHomePressed,
     required this.onWorkPressed,
+    required this.onExpPressed,
   });
 
   // Your URL launcher logic for the resume remains perfectly intact
@@ -52,9 +54,7 @@ class navBar extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 30), // Added consistent spacing between items
-
-              // --- BUTTON 2: WORK (Smooth Scroll) ---
+              const SizedBox(width: 30),
               TextButton(
                 onPressed: onWorkPressed, 
                 child: const Text(
@@ -65,6 +65,20 @@ class navBar extends StatelessWidget {
                   ),
                 ),
               ),
+
+              const SizedBox(width: 30),
+
+              TextButton(
+                onPressed: onExpPressed,
+                child: const Text(
+                  'Experience',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 226, 143, 201),
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+
               const SizedBox(width: 30),
 
               // --- BUTTON 3: RESUME (External URL Link) ---

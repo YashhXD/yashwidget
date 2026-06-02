@@ -7,6 +7,8 @@ import 'package:portfolio/widgets/nav_bar/nav.dart';
 import 'package:portfolio/widgets/work/work1.dart';
 import 'package:portfolio/widgets/work/work2.dart';
 import 'package:portfolio/widgets/work/work3.dart';
+import 'package:portfolio/widgets/skills/skills.dart';
+import 'package:portfolio/widgets/workw/worked.dart';
 import 'package:flutter/scheduler.dart';
 
 // 1. The Mouse Wheel Accumulator (Tuned for smooth ease-in/ease-out)
@@ -136,7 +138,7 @@ class _HomeViewState extends State<HomeView> {
   final ScrollController _scrollController = ScrollController();
   final GlobalKey _heroKey = GlobalKey();
   final GlobalKey _workKey = GlobalKey();
-  final GlobalKey _skills = GlobalKey();
+  final GlobalKey _expKey = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
     final RenderBox? renderBox = key.currentContext?.findRenderObject() as RenderBox?;
@@ -189,6 +191,7 @@ class _HomeViewState extends State<HomeView> {
                       navBar(
                         onHomePressed: () => _scrollToSection(_heroKey),
                         onWorkPressed: () => _scrollToSection(_workKey),
+                        onExpPressed: () => _scrollToSection(_expKey),
                       ),
                       
                       Container(
@@ -202,7 +205,8 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 400,),
+                      SizedBox(height: 350),
+                      SizedBox(height: 50,key: _workKey,),
                       Container(
                         width: 1000,
                         child: Text('My Work',
@@ -212,9 +216,8 @@ class _HomeViewState extends State<HomeView> {
                         color: const Color.fromARGB(255, 236, 166, 174)
                           ),),
                       ),
-                      SizedBox(height: 50,),
+                      SizedBox(height: 50),
                       Container(
-                        key: _skills,
                         child: IntrinsicHeight(
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -224,7 +227,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 100,),
+                      SizedBox(height: 70,),
                       Container(
                         child: IntrinsicHeight(
                           child: Row(
@@ -235,7 +238,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 100,),
+                      SizedBox(height: 70,),
                       Container(
                         child: IntrinsicHeight(
                           child: Row(
@@ -246,7 +249,49 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 100,),
+                      SizedBox(height: 70,),
+                      Container(
+                        width: 1000,
+                        child: Text('Skills',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                        fontSize: 70,
+                        color: const Color.fromARGB(255, 236, 166, 174)
+                          ),),
+                      ),
+                      SizedBox(height: 30,),
+                      Container(
+                        child: IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const <Widget>[
+                              Expanded(child: skillSection()),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      SizedBox(height: 40,key: _expKey),
+                      Container(
+                        width: 1000,
+                        child: Text('Experience',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                        fontSize: 70,
+                        color: const Color.fromARGB(255, 236, 166, 174)
+                          ),),
+                      ),
+                      SizedBox(height: 30,),
+                      Container(
+                        child: IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const <Widget>[
+                              Expanded(child: workedWith()),
+                            ],
+                          ),
+                        ),
+                      ),
                       
                     ],
                   ),
