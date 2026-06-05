@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class socialInfo extends StatelessWidget {
@@ -10,13 +9,32 @@ class socialInfo extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Text('Get in Touch.'),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FlutterSocialButton(
-                onTap: () => (),
-                buttonType: ButtonType.instagram,
-              )
+              Text('Get ',style: TextStyle(
+              fontSize: 35,
+              fontFamily: 'WorkSansB',
+              fontWeight: FontWeight.w900,
+              color: const Color(0xFF5B438A),
+            ),),
+              Text('in Touch .',style: TextStyle(
+              fontSize: 35,
+              fontFamily: 'WorkSansB',
+              fontWeight: FontWeight.w900,
+              color: Color(0xFF182042),
+              
+            ),),
+            ]
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.apple),
+              FaIcon(
+  FontAwesomeIcons.linkedin, 
+  color: Color(0xFF0A66C2), // LinkedIn Official Blue
+)
             ],
           )
         ],

@@ -13,8 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   url_launcher: ^6.3.2
   auto_scrolling: ^0.4.0
-  font_awesome_flutter: '>= 4.7.0'
-  flutter_social_button: ^1.1.6+1
+  font_awesome_flutter: ^11.0.0
 
 dev_dependencies:
   flutter_test:
@@ -60,3 +59,13 @@ flutter:
     - family : Alata
       fonts:
         - asset: assets/fonts/Alata.ttf
+
+    - family : WorkSans
+      fonts:
+        - asset: assets/fonts/WorkSans-SemiBold.ttf
+          weight: 600
+
+    - family : WorkSansB
+      fonts:
+        - asset: assets/fonts/WorkSans-Bold.ttf
+          weight: 700
