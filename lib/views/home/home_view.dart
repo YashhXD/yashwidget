@@ -8,7 +8,9 @@ import 'package:portfolio/widgets/work/work1.dart';
 import 'package:portfolio/widgets/work/work2.dart';
 import 'package:portfolio/widgets/work/work3.dart';
 import 'package:portfolio/widgets/skills/skills.dart';
-import 'package:portfolio/widgets/workw/worked.dart';
+import 'package:portfolio/widgets/workw/worked1.dart';
+import 'package:portfolio/widgets/workw/worked2.dart';
+import 'package:portfolio/widgets/socials/socials.dart';
 import 'package:flutter/scheduler.dart';
 
 // 1. The Mouse Wheel Accumulator (Tuned for smooth ease-in/ease-out)
@@ -287,7 +289,29 @@ class _HomeViewState extends State<HomeView> {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: const <Widget>[
-                              Expanded(child: workedWith()),
+                              Expanded(child: workedWith1()),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      Container(
+                        child: IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const <Widget>[
+                              Expanded(child: workedWith2()),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      Container(
+                        child: IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const <Widget>[
+                              Expanded(child: socialInfo()),
                             ],
                           ),
                         ),

@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class workedWith extends StatelessWidget {
-  const workedWith({super.key});
+class workedWith1 extends StatelessWidget {
+  const workedWith1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +26,6 @@ class workedWith extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // --- LEFT HAND SIDE: PROJECT IMAGE SCREEN ---
-                Expanded(
-                  flex: 4, // Takes up ~40% of horizontal space
-                  child: AspectRatio(
-                    aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('assets/work_asset/terminal.png', // Sample placeholder link
-                        fit: BoxFit.fitHeight,
-                      ),
-                    ),
-                  ),
-                ),
                 
                 const SizedBox(width: 32), // Gap between Image and Text elements
 
@@ -47,15 +35,15 @@ class workedWith extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Terminal Git Chat',
+                      const Text('Studio 3',
                       style: TextStyle(
-                        fontFamily: 'Meringue',
+                        fontFamily: 'Alata',
                         fontSize: 30,
-                        fontWeight: FontWeight(800)
+                        fontWeight: FontWeight.bold
                       ),),
                       // 1. Description Text
                       const Text(
-                        'I created Terminal Git Chat. It utilizes GitHub in a way that allows repository collaborators to chat in real-time, keeping the entire chat database in a simple text file.',
+                        'Worked as a motion graphic designer transforming raw footage into into engaging and intuitive motion graphic.',
                         style: TextStyle(
                           fontFamily: 'SpaceSB',
                           fontSize: 20,
@@ -67,9 +55,15 @@ class workedWith extends StatelessWidget {
                       const SizedBox(height: 12),
 
                       // 2. Custom Bullet Points
-                      _buildBulletPoint('Completely made using JavaScript'),
+                      const Text('Sept 25 - Feb 26, Remote', style: TextStyle( 
+                        fontSize: 16,
+                        fontFamily: 'Alata',
+
+                      ),),
+                      SizedBox(height: 10,),
+                      _buildBulletPoint('Primarily used Adobe Premier Pro , After Effects and Photoshop'),
                       const SizedBox(height: 6),
-                      _buildBulletPoint('Utilizes GitHub as backend server'),
+                      _buildBulletPoint('Web asset for user comprehension'),
                       const SizedBox(height: 24),
 
                       // 3. Tech Stack Tags Row
@@ -77,45 +71,24 @@ class workedWith extends StatelessWidget {
                         spacing: 12, // Gap between chips horizontally
                         runSpacing: 8, // Gap if chips wrap to next line
                         children: [
-                          _buildTechChip('GitHub'),
-                          _buildTechChip('JavaScript'),
+                          _buildTechChip('Adobe After Effects'),
+                          _buildTechChip('Adobe Premier Pro'),
                         ],
                       ),
-                      const SizedBox(height: 60),
-
-                      // 4. GitHub View Project Button aligned to the bottom-right
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: ElevatedButton.icon(
-                          onPressed: () async {
-                              // 2. Parse your GitHub link into a valid Uri object
-                              final Uri repoUrl = Uri.parse('https://github.com/YashhXD/Terminal-Git-Chat');
-
-                              // 3. Check if the device can open the URL, then launch it
-                              if (!await launchUrl(repoUrl, mode: LaunchMode.externalApplication)) {
-                                // Optional: Show an error snackbar if the link fails to open
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Something went wrong, we are gonna work on it')),
-                                );
-                              }
-                          },
-                          icon: const Icon(Icons.code_rounded, size: 18, color: Colors.white), // Standard icon fallback
-                          label: const Text(
-                            'View Project',
-                            style: TextStyle(
-                              fontFamily: 'SpaceSB',
-                              fontWeight: FontWeight.w600, color: Colors.white),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.black,
-                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                          ),
-                        ),
-                      ),
+                      const SizedBox(height: 30),
                     ],
+                  ),
+                ),
+                Expanded(
+                  flex: 5, // Takes up ~40% of horizontal space
+                  child: AspectRatio(
+                    aspectRatio: 4 / 3, // Maintains a clean desktop/monitor display ratio
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset('assets/work_asset/studio3.png', // Sample placeholder link
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               ],
