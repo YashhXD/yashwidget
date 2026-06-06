@@ -14,7 +14,7 @@ class SmoothScrollWrapper extends StatelessWidget {
     required this.child,
     this.scrollSpeed = 130.0,
     this.animationDuration = 400,
-    this.curve = Curves.easeOutQuad, // FIXED: Changed from outQuadrant to easeOutQuad
+    this.curve = Curves.easeOutQuad,
   });
 
   @override
@@ -22,20 +22,13 @@ class SmoothScrollWrapper extends StatelessWidget {
     return Listener(
       onPointerSignal: (pointerSignal) {
         if (pointerSignal is PointerScrollEvent) {
-          // Detect the direction of the mouse wheel scroll
           final double delta = pointerSignal.scrollDelta.dy;
           if (delta == 0) return;
-
-          // Calculate the new target scroll position
           double targetOffset = controller.offset + (delta > 0 ? scrollSpeed : -scrollSpeed);
-          
-          // Clamp the target offset so it doesn't scroll past the top or bottom boundaries
           targetOffset = targetOffset.clamp(
             controller.position.minScrollExtent,
             controller.position.maxScrollExtent,
           );
-
-          // Animate smoothly to the target position
           controller.animateTo(
             targetOffset,
             duration: Duration(milliseconds: animationDuration),
@@ -44,7 +37,6 @@ class SmoothScrollWrapper extends StatelessWidget {
         }
       },
       child: ScrollConfiguration(
-        // Deselect standard drag scrolling physics on desktop to prevent conflicts
         behavior: ScrollConfiguration.of(context).copyWith(
           dragDevices: {
             PointerDeviceKind.touch,

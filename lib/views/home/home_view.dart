@@ -1,6 +1,6 @@
-import 'package:flutter/gestures.dart'; // Required for pointer signal interception
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart'; // Required for FrictionSimulation
+import 'package:flutter/physics.dart';
 import 'package:portfolio/widgets/centered_view/centered_view.dart';
 import 'package:portfolio/widgets/course_details/course_details.dart';
 import 'package:portfolio/widgets/nav_bar/nav.dart';
@@ -13,7 +13,6 @@ import 'package:portfolio/widgets/workw/worked2.dart';
 import 'package:portfolio/widgets/socials/socials.dart';
 import 'package:flutter/scheduler.dart';
 
-// 1. The Mouse Wheel Accumulator (Tuned for smooth ease-in/ease-out)
 class MouseWheelSmoothScroll extends StatefulWidget {
   final Widget child;
   final ScrollController controller;
@@ -64,7 +63,6 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
       widget.controller.position.maxScrollExtent,
     );
 
-    // Light friction for a long ease-out glide
     _velocity *= 0.90; 
 
     if (newPosition == widget.controller.position.minScrollExtent ||
@@ -79,10 +77,8 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
     if (event is PointerScrollEvent) {
       if (!widget.controller.hasClients) return;
 
-      // Gentle push for a soft ease-in
       _velocity += event.scrollDelta.dy / 2  ;
 
-      // THE FIX: Terminal Velocity Clamp prevents wild speed spikes
       _velocity = _velocity.clamp(-15.0, 15.0);
 
       if (!_ticker.isTicking) {
@@ -107,7 +103,6 @@ class _MouseWheelSmoothScrollState extends State<MouseWheelSmoothScroll> with Si
   }
 }
 
-// 2. Custom Native Physics (Makes trackpad and mobile swipes glide smoothly)
 class SmoothGlidingScrollPhysics extends ScrollPhysics {
   const SmoothGlidingScrollPhysics({super.parent});
 
@@ -185,7 +180,7 @@ class _HomeViewState extends State<HomeView> {
               child: SingleChildScrollView(
                 controller: _scrollController,
                 physics: const SmoothGlidingScrollPhysics(
-                parent: BouncingScrollPhysics(), 
+                  parent: BouncingScrollPhysics(), 
                 ),
                 child: CenteredView(
                   child: Column(
@@ -320,10 +315,10 @@ class _HomeViewState extends State<HomeView> {
                       Container(
                         width: double.infinity,
                         height: 60,
-                        // 🟢 Move color inside BoxDecoration and add borderRadius
                         decoration: const BoxDecoration(
-                          color: Color(0xFF292A5A), // Moved inside decoration
-                          borderRadius: BorderRadius.all(Radius.circular(10)),),
+                          color: Color(0xFF292A5A),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
                         padding: const EdgeInsets.symmetric(horizontal: 40), 
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -337,7 +332,6 @@ class _HomeViewState extends State<HomeView> {
                               'Made with lots of love and coffee 💛',
                               style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 14,
                               fontFamily: 'Alata'),
-
                             ),
                           ],
                         ),

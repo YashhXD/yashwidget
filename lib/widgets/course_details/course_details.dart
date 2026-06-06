@@ -6,14 +6,14 @@ class CourseDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 180), // Added const here
+      padding: const EdgeInsets.only(top: 180),
       width: 800,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: const <Widget>[
           SizedBox(height: 60,),
-          Text( // Adding const here covers the Text and its TextStyle
+          Text(
             'I am \nYash Mehta',
             style: TextStyle(
               
@@ -23,8 +23,8 @@ class CourseDetails extends StatelessWidget {
               color: Color.fromARGB(255, 24, 30, 62),
             ),
           ),
-          SizedBox(height: 70,), // Added const here
-          Text( // Adding const here covers the Text and its TextStyle
+          SizedBox(height: 70,),
+          Text(
             'Flutter Developer | Motion Graphic Designer | 3D Visual Artist',
             style: TextStyle(
               fontWeight: FontWeight.w500,

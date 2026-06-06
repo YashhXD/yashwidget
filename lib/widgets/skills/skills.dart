@@ -47,7 +47,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/dart.png',height: 45),
+              Image.asset('assets/logos/Dart.png',height: 45),
               SizedBox(height: 8,),
               Text('Dart',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -75,7 +75,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/java.png',height: 45),
+              Image.asset('assets/logos/Java.png',height: 45),
               SizedBox(height: 8,),
               Text('Java',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
