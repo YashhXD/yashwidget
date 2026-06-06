@@ -23,9 +23,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('C++',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -37,9 +37,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('Django',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -51,9 +51,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('Dart',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -65,9 +65,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('Flutter',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -79,9 +79,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('Java',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -93,9 +93,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('JavaScript',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -107,9 +107,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('HTML5',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -120,9 +120,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('After FX',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -133,9 +133,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('PremPro',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -147,9 +147,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('Blender',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),
@@ -161,9 +161,9 @@ class _skillSectionState extends State<skillSection> {
               SizedBox(height: 8,),
               Text('Python',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
-                fontFamily: 'Baro',
+                fontFamily: 'Alata',
                 fontSize: 18,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w300,
               ),)
             ],
           ),),

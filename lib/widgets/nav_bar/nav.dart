@@ -24,6 +24,37 @@ class navBar extends StatelessWidget {
       throw Exception('Could not launch $url');
     }
   }
+void _showSimpleDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text('Woah woah fellow vistor STEP BACK !!',style: TextStyle(fontFamily: 'SpaceB',fontSize: 20),),
+        content: Column(
+          // 1. Prevents the dialog from stretching vertically across the whole screen
+          mainAxisSize: MainAxisSize.min, 
+          children: [
+            const Text('Construction is going on here',style: TextStyle(fontFamily: 'SpaceR',fontSize: 15),),
+            const SizedBox(height: 20), // Adds spacing between the text and the GIF
+            
+            // 2. Add your GIF here
+            Image.network(
+              'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnIxbGtwdjhhOThuc2ozN3FidWl5NGVvbWF5c3U2bnZzbHhxYzMyMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZTans30ONaaIM/giphy.gif',
+              height: 150, // Control the size of the GIF
+              fit: BoxFit.contain,
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('Close',style: TextStyle(fontFamily: 'SpaceR',fontSize: 15),),
+          ),
+        ],
+      );
+    },
+  );
+}
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +127,7 @@ class navBar extends StatelessWidget {
 
               // --- BUTTON 4: SHIT POSTING (Console log placeholder) ---
               TextButton(
-                onPressed: () { debugPrint('Shit Posting pressed'); },
+                onPressed: () => _showSimpleDialog(context),
                 child: const Text(
                   'Shit Posting',
                   style: TextStyle(

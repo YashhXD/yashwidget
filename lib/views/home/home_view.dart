@@ -185,7 +185,7 @@ class _HomeViewState extends State<HomeView> {
               child: SingleChildScrollView(
                 controller: _scrollController,
                 physics: const SmoothGlidingScrollPhysics(
-                  parent: BouncingScrollPhysics(), 
+                parent: BouncingScrollPhysics(), 
                 ),
                 child: CenteredView(
                   child: Column(
@@ -316,7 +316,32 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
-                      
+                      SizedBox(height: 70,),
+                      Container(
+                        width: double.infinity,
+                        height: 60,
+                        // 🟢 Move color inside BoxDecoration and add borderRadius
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF292A5A), // Moved inside decoration
+                          borderRadius: BorderRadius.all(Radius.circular(10)),),
+                        padding: const EdgeInsets.symmetric(horizontal: 40), 
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Yash Mehta',
+                              style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 16,
+                              fontFamily: 'Alata'),
+                            ),
+                            Text(
+                              'Made with lots of love and coffee 💛',
+                              style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 14,
+                              fontFamily: 'Alata'),
+
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),

@@ -49,7 +49,7 @@ class socialInfo extends StatelessWidget {
                 iconSize: 30,
                 color: Color.fromARGB(255, 41, 42, 90),
                 onPressed: () async {
-                  final Uri url = Uri.parse('https://github.com/YashhXD');
+                  final Uri url = Uri.parse('https://www.linkedin.com/in/yash37/');
                   if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
                     throw Exception('Could not launch $url');
                   }
