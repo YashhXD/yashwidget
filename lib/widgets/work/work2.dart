@@ -99,7 +99,7 @@ class WorkSection2 extends StatelessWidget {
                     aspectRatio: 4 / 3,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("assets/work_asset/insta_work.png"),
+                      child: Image.asset("assets/work_asset/insta_work.webp"),
                     ),
                   ),
                 ),

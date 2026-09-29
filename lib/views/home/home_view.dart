@@ -164,7 +164,7 @@ class _HomeViewState extends State<HomeView> {
       child: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background/back.jpg'),
+            image: AssetImage('assets/background/back.webp'),
             fit: BoxFit.cover,
           ),
         ),

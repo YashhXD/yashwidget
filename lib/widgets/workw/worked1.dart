@@ -103,7 +103,7 @@ class workedWith1 extends StatelessWidget {
                     aspectRatio: 4 / 3,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('assets/work_asset/studio3.png',
+                      child: Image.asset('assets/work_asset/studio3.webp',
                         fit: BoxFit.cover,
                       ),
                     ),

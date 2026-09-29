@@ -19,7 +19,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/cpp.png',height: 45),
+              Image.asset('assets/logos/cpp.webp',height: 45),
               SizedBox(height: 8,),
               Text('C++',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -33,7 +33,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/django.png',height: 45),
+              Image.asset('assets/logos/django.webp',height: 45),
               SizedBox(height: 8,),
               Text('Django',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -47,7 +47,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/Dart.png',height: 45),
+              Image.asset('assets/logos/Dart.webp',height: 45),
               SizedBox(height: 8,),
               Text('Dart',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -61,7 +61,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/flutter.png',height: 45),
+              Image.asset('assets/logos/flutter.webp',height: 45),
               SizedBox(height: 8,),
               Text('Flutter',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -75,7 +75,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/Java.png',height: 45),
+              Image.asset('assets/logos/Java.webp',height: 45),
               SizedBox(height: 8,),
               Text('Java',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -89,7 +89,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/js.png',height: 45),
+              Image.asset('assets/logos/js.webp',height: 45),
               SizedBox(height: 8,),
               Text('JavaScript',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -103,7 +103,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/html.png',height: 45),
+              Image.asset('assets/logos/html.webp',height: 45),
               SizedBox(height: 8,),
               Text('HTML5',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -116,7 +116,7 @@ class _skillSectionState extends State<skillSection> {
           Expanded(child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset('assets/logos/ae.png',height: 45),
+              Image.asset('assets/logos/ae.webp',height: 45),
               SizedBox(height: 8,),
               Text('After FX',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -129,7 +129,7 @@ class _skillSectionState extends State<skillSection> {
           Expanded(child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset('assets/logos/pp.png',height: 45),
+              Image.asset('assets/logos/pp.webp',height: 45),
               SizedBox(height: 8,),
               Text('PremPro',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -143,7 +143,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/blender.png',height: 45),
+              Image.asset('assets/logos/blender.webp',height: 45),
               SizedBox(height: 8,),
               Text('Blender',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),
@@ -157,7 +157,7 @@ class _skillSectionState extends State<skillSection> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logos/python.png',height: 45),
+              Image.asset('assets/logos/python.webp',height: 45),
               SizedBox(height: 8,),
               Text('Python',style: TextStyle(
                 color: Color.fromARGB(255, 24, 30, 62),

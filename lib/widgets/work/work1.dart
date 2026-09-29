@@ -30,7 +30,7 @@ class WorkSection1 extends StatelessWidget {
                     aspectRatio: 4 / 3,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset('assets/work_asset/terminal.png', // Sample placeholder link
+                      child: Image.asset('assets/work_asset/terminal.webp', // Sample placeholder link
                         fit: BoxFit.fitHeight,
                       ),
                     ),
