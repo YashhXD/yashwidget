@@ -48,7 +48,7 @@ class workedWith2 extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      const Text('May 25 - Present, Remote', style: TextStyle( 
+                      const Text('May 2025 - Present, Remote', style: TextStyle( 
                         fontSize: 16,
                         fontFamily: 'Alata',
 
