@@ -60,8 +60,6 @@ class WorkSection3 extends StatelessWidget {
                       const SizedBox(height: 12),
                       _buildBulletPoint('Based on Dart language developed by Google.'),
                       const SizedBox(height: 6),
-                      _buildBulletPoint('Based on Dart language developed by Google.'),
-                      const SizedBox(height: 6),
                       _buildBulletPoint('Works locally requiring no internet connectivity.'),
                       const SizedBox(height: 6),
                       _buildBulletPoint('Beta version is published and further feature about to roll out.'),
