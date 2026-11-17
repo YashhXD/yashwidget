@@ -19,6 +19,6 @@ samples, guidance on mobile development, and a full API reference.
 
 # Push changes to live website
 ```
-firebase deploy --only hosting
+flutter build web --release
 firebase deploy --only hosting
 ```
