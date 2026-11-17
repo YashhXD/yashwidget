@@ -1,6 +1,6 @@
-# My portfolio
+# Yash widget protfolio
 
-I am building my protfolio website to showcase my skills , projects , understanding the core technologies I know and a special element which will be a separation section where I am going to post my behind the screen shots and stories I want to convey , all the issues I had during building certain project and what I accomplished after creating them.
+Built the protfolio website to showcase my skills , projects , understanding the core technologies I know and a special element which will be a separation section where I am going to post my behind the screen shots and stories I want to convey , all the issues I had during building certain project and what I accomplished after creating them.
 So this is gonna be a really interetsing project for me.
 
 ## Getting Started
