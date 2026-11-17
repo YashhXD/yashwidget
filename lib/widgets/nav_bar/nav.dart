@@ -23,7 +23,7 @@ void _showSimpleDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text('Woah woah fellow vistor STEP BACK !!',style: TextStyle(fontFamily: 'SpaceB',fontSize: 20),),
+        title: const Text('Woah woah fellow visitor STEP BACK !!',style: TextStyle(fontFamily: 'SpaceB',fontSize: 20),),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
